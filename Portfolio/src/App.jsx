@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
+const BASE_URL = '/Garrett/Portfolio/'
+
 function TypewriterText({ text, delay = 0 }) {
   const [displayText, setDisplayText] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -93,6 +95,8 @@ function App() {
       setCurrentExperienceIndex(prev => prev - 1)
     }
   }
+
+  const resumeUrl = `${BASE_URL}REAL_RESUME_Garrett (6).pdf`
 
   return (
     <div className="min-h-screen bg-primary text-textPrimary">
@@ -344,7 +348,7 @@ function App() {
                 Contact Me
               </a>
               <a
-                href="/REAL_RESUME_Garrett (6).pdf"
+                href={resumeUrl}
                 download="Garrett_Bartko_Resume.pdf"
                 className="inline-flex items-center px-8 py-4 bg-secondary text-primary rounded-lg hover:bg-secondary/90 transition-colors text-lg font-medium"
               >
