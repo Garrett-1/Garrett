@@ -18,7 +18,7 @@ import './index.css'
 }(window.location))
 
 // Handle base URL for GitHub Pages
-const baseUrl = '/Garrett/Portfolio/';
+const baseUrl = '/Garrett/';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // Ensure we're using the correct base URL
